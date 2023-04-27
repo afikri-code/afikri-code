@@ -1,0 +1,31 @@
+# Spring Boot
+**/target/
+*.log
+/build/
+!**/application*.properties
+
+
+# Gradle
+.gradle/
+build/
+*.iml
+
+# IntelliJ IDEA
+*.iws
+.idea/
+*.ipr
+
+# Eclipse
+.settings/
+.classpath
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# Maven
+/.mvn/
+*mvn/
