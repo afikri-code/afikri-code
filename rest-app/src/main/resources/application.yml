@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: myuser
+    password: myuser
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+  flyway:
+    locations=classpath: db/migration
+    baselineOnMigrate: true
