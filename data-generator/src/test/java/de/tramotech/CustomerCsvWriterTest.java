@@ -1,6 +1,6 @@
 package de.tramotech;
 
-import model.Customer;
+import de.tramotech.model.Customer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,6 @@
 package de.tramotech.testutils;
 
-import model.Customer;
+import de.tramotech.model.Customer;
 
 import java.time.LocalDate;
 

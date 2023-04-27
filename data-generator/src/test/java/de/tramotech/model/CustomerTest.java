@@ -1,4 +1,4 @@
-package model;
+package de.tramotech.model;
 
 import org.junit.jupiter.api.Test;
 
