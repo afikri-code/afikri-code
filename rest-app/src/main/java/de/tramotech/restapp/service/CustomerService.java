@@ -1,7 +1,7 @@
 package de.tramotech.restapp.service;
 
 import de.tramotech.restapp.dto.CustomerDto;
-import de.tramotech.restapp.dto.CustomerDtoParser;
+import de.tramotech.restapp.dto.DtoParser;
 import de.tramotech.restapp.model.Customer;
 import de.tramotech.restapp.repository.CustomerRepository;
 import org.modelmapper.ModelMapper;
@@ -70,7 +70,7 @@ public class CustomerService {
 
     public void saveAllCustomers(List<String> lines) {
         List<Customer> list = lines.stream()
-                .map(str -> CustomerDtoParser.parseFromRawInput(str, ";"))
+                .map(str -> DtoParser.parseCustomerFromRawInput(str, ";"))
                 .map(customerDto -> modelMapper.map(customerDto, Customer.class))
                 .collect(Collectors.toList());
         customerRepository.saveAll(list);
