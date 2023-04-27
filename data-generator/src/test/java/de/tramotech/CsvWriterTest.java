@@ -1,6 +1,5 @@
 package de.tramotech;
 
-import com.opencsv.CSVReaderBuilder;
 import model.Customer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,7 +26,7 @@ class CsvWriterTest {
         deleteFileIfExists(FILE_PATH);
         csvWriter = new CsvWriter<>();
         data = new ArrayList<>();
-        mapper = customer -> new String[]{customer.getId().toString(), customer.getCustomerId(), customer.getFirstName(), customer.getLastName(), customer.getBirthday().toString(), customer.getEmail(), customer.getPhoneNumber(), customer.getAddress(), customer.getCity(), customer.getPostalCode(), customer.getAddressCountry(), customer.getPlaceOfBirthCountry()};
+        mapper = customer -> new String[]{customer.getCustomerNr(), customer.getFirstName(), customer.getLastName(), customer.getBirthday().toString(), customer.getEmail(), customer.getPhoneNumber(), customer.getAddress(), customer.getCity(), customer.getPostalCode(), customer.getAddressCountry(), customer.getPlaceOfBirthCountry()};
     }
 
     @Test

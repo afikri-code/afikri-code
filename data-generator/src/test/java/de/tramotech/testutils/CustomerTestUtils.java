@@ -7,7 +7,6 @@ import java.time.LocalDate;
 public class CustomerTestUtils {
 
     // test data
-    public static final Long ID = 1L;
     public static final String CUSTOMER_ID = "007-56-9501";
     public static final String FIRST_NAME = "Anne";
     public static final String LAST_NAME = "Malek";
@@ -27,8 +26,7 @@ public class CustomerTestUtils {
      */
     public static Customer createCustomer() {
         Customer customer = new Customer();
-        customer.setId(ID);
-        customer.setCustomerId(CUSTOMER_ID);
+        customer.setCustomerNr(CUSTOMER_ID);
         customer.setFirstName(FIRST_NAME);
         customer.setLastName(LAST_NAME);
         customer.setBirthday(BIRTHDAY);

@@ -2,15 +2,12 @@ package model;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-
 import static de.tramotech.testutils.CustomerTestUtils.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Unit tests for the {@link Customer} class.
  * These tests serve as a sanity check to ensure that the Customer class works as expected.
- *
  * Author: Ahmed Fikri
  */
 class CustomerTest {
@@ -24,8 +21,7 @@ class CustomerTest {
     void readCustomer() {
         Customer actual = createCustomer();
 
-        assertThat(actual.getId()).isEqualTo(ID);
-        assertThat(actual.getCustomerId()).isEqualTo(CUSTOMER_ID);
+        assertThat(actual.getCustomerNr()).isEqualTo(CUSTOMER_ID);
         assertThat(actual.getFirstName()).isEqualTo(FIRST_NAME);
         assertThat(actual.getLastName()).isEqualTo(LAST_NAME);
         assertThat(actual.getBirthday()).isEqualTo(BIRTHDAY);

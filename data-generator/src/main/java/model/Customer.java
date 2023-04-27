@@ -15,8 +15,7 @@ import java.time.LocalDate;
  */
 @Data
 public class Customer {
-    private Long id;
-    private String customerId;
+    private String customerNr;
     private String firstName;
     private String lastName;
     private LocalDate birthday;

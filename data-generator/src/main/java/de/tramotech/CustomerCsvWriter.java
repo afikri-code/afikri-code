@@ -13,7 +13,7 @@ import model.Customer;
  */
 public class CustomerCsvWriter {
 
-    private final String[] HEADER = {"customerId", "firstName", "lastName", "birthday", "email", "phoneNumber", "address", "city", "postalCode", "address_country", "place_of_birth_country"};
+    private final String[] HEADER = {"customerNr", "firstName", "lastName", "birthday", "email", "phoneNumber", "address", "city", "postalCode", "address_country", "place_of_birth_country"};
 
     /**
      * Writes a list of Customer objects to a CSV file at the specified path.
@@ -25,7 +25,7 @@ public class CustomerCsvWriter {
     public void writeCustomersToCsv(List<Customer> customers, String filePath) throws IOException {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         Function<Customer, String[]> mapper = customer -> new String[]{
-                customer.getCustomerId(),
+                customer.getCustomerNr(),
                 customer.getFirstName(),
                 customer.getLastName(),
                 customer.getBirthday().format(dateFormatter),
